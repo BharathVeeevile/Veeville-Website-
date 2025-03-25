@@ -1,0 +1,546 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+  position: sticky; /* Make navbar sticky */
+  top: 0;           /* Stick to top */
+  z-index: 1000;    /* Ensure navbar stays on top of other elements */
+  background-color: #fff;
+}
+
+.logo-image {
+  height: 40px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #888;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a.active
+{
+  color: #000;
+  font-weight: bold;
+  /* border-bottom: 2px solid black; */
+  padding-bottom: 3px;
+}
+.nav-links li a:hover {
+  color: #000;
+  font-weight: bold;
+  border-bottom: 2px solid black;
+  padding-bottom: 3px;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+
+
+
+  .hamburger.close-style {
+    background-color: #000;
+    padding: 2px 15px;
+    border-radius: 25px;
+  }
+  
+  .hamburger.close-style i {
+    color: #fff;
+    font-size: 20px;
+  }
+  
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0px;
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    z-index: 10;
+}
+  
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin-bottom: 0px;
+  }
+
+  .nav-links li:last-child {
+    margin-bottom: 0;
+  }
+
+}
+
+
+
+/* About Section */
+.about-section {
+  padding: 60px 60px;
+  margin-top: 0px;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  /* Full width */
+  margin: 0 auto;
+  text-align: left;
+  gap: 50px;
+  color: #000;
+
+}
+
+.about-column {
+  flex: 1;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.about-description {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.veeville-tag {
+  font-style: italic; /* Italicize the text */
+  font-family: Georgia, serif; /* Apply Georgia font */
+  font-size: 24px; /* Larger font size */
+  font-weight: bold; /* Make it stand out */
+  color: #333; /* Dark color for emphasis */
+}
+
+
+@media (max-width: 768px) {
+  .veeville-tag {
+    font-size: 20px; /* Adjust the font size for smaller screens */
+  }
+}
+
+
+@media (min-width:768px) and (max-width: 1024px){
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-section{
+    padding: 20px;
+  }
+  .about-container{
+    gap:0px;
+  }
+  .about-title{
+    font-size: 32px;
+  }
+
+  .about-description{
+    font-size: 14px;
+    padding: 0px 15px;
+  }
+
+  .about-section{
+    margin-top: 65px !important;
+  }
+}
+
+
+
+@media (max-width: 767px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-section{
+    padding: 20px;
+  }
+  .about-container{
+    gap:0px;
+  }
+  .about-title{
+    font-size: 32px;
+  }
+
+  .about-description{
+    font-size: 14px;
+    padding: 0px 5px;
+  }
+
+  .about-section{
+    margin-top: 65px !important;
+  }
+}
+
+/* Team Section */
+.team-section {
+  padding: 60px 20px;
+}
+
+.team-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* Allow wrapping for responsive design */
+  gap: 20px;
+  max-width: 100%;
+  /* Full width */
+  margin: 0 auto;
+  
+}
+
+.team-member {
+  text-align: center;
+  flex: 1 1 30%;
+  /* Allow flexible widths */
+}
+
+.team-member img {
+  width: 100%;
+  max-width: 450px;
+  /* Maintain maximum width */
+  height: auto;
+  object-fit: cover;
+}
+
+.team-info h3 {
+  font-size: 1.2rem;
+  margin: 10px 0 5px;
+  color: #000;
+}
+
+.team-info p {
+  font-size: 1rem;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .team-container {
+    flex-direction: column;
+    /* Stack team members vertically */
+    gap: 20px;
+    /* Space between rows */
+  }
+
+  .team-member {
+    flex: 1 1 100%;
+    /* Occupy full width for each row */
+    text-align: center;
+    /* Center-align content */
+  }
+
+  .team-member img {
+    width: 100%;
+    /* Full width image */
+    max-width: 450px;
+    /* Optional: set a maximum width */
+    margin: 0 auto;
+    /* Center image horizontally */
+    height: auto;
+    /* Maintain aspect ratio */
+  }
+}
+
+
+@media (max-width: 767px) {
+  .team-member img {
+    max-width: 100%;
+  }
+
+  .team-info h3 {
+    font-size: 1rem;
+  }
+
+  .team-info p {
+    font-size: 0.9rem;
+  }
+  .team-section {
+    padding: 20px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .team-container {
+    display: grid;
+    /* Use grid layout */
+    grid-template-columns: repeat(2, 1fr);
+    /* Two equal columns */
+    gap: 20px;
+    /* Space between items */
+    justify-content: center;
+    /* Center the grid within the container */
+  }
+
+  .team-member {
+    text-align: center;
+    width: 100%;
+    /* Ensure team member occupies full available width */
+  }
+
+  .team-member img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Dynamically hide the last element if it's alone in a row */
+  .team-container>.team-member:nth-last-child(1):nth-child(odd) {
+    display: none;
+    /* Hide the last item if it's in an odd position */
+  }
+
+  
+}
+
+
+
+
+
+
+/* Names Section */
+/* Names Section */
+.names-section {
+  padding: 20px 20px;
+}
+
+.container {
+  max-width: 100%;
+  /* Full width */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.group {
+  margin-bottom: 40px;
+  color: #000;
+}
+
+.group-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* Default: equal spacing */
+  gap: 20px;
+}
+
+.columns ul {
+  list-style: none;
+  padding: 0;
+  flex: 1 1 20%;
+  /* Default: flexible columns */
+}
+
+.columns ul li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+@media (max-width: 767px) {
+  .columns {
+    display: flex;
+    flex-direction: column;
+    /* Stack the columns vertically */
+    align-items: center;
+    /* Center-align the list items */
+    text-align: center;
+    /* Ensure the text is centered */
+  }
+
+  .columns ul {
+    flex: 1 1 auto;
+    /* Allow the lists to take full width */
+    width: 100%;
+    /* Make sure they occupy the full container width */
+    padding: 0;
+  }
+
+  .columns ul li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .group-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .columns {
+    display: grid;
+    /* Use grid layout */
+    grid-template-columns: repeat(3, 1fr);
+    /* Three columns */
+    gap: 20px;
+    /* Space between columns and rows */
+    justify-content: center;
+    /* Center-align the grid */
+  }
+
+  .columns ul {
+    width: 100%;
+    /* Ensure each <ul> fills its grid cell */
+    list-style: none;
+    /* Remove default list styling */
+    padding: 0;
+    /* Remove default padding */
+    text-align: left;
+    /* Align text to the left */
+  }
+}
+
+
+
+
+
+/* Footer */
+.footer {
+  background-color: #333;
+  padding: 20px;
+  color: #fff;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-left a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  margin-right: 15px;
+}
+
+.footer-left p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.footer-right {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.footer-link {
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-right a:hover {
+  color: #fff;
+}
+
+.footer-link i {
+  font-size: 20px;
+}
+
+/* Responsive Design for Mobile (max-width: 768px) */
+@media (max-width: 767px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-left {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .footer-left a {
+    display: block; /* Stack links vertically in mobile */
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+
+  .footer-right {
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+}
+
+/* Tablet and Desktop Version (min-width: 769px) */
+@media (min-width: 769px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-left {
+    text-align: left;
+  }
+
+  .footer-left a {
+    display: inline; /* Show links inline for tablet and laptop */
+    margin-bottom: 0;
+  }
+
+  .footer-right {
+    justify-content: flex-end;
+  }
+}

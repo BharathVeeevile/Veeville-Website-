@@ -1,0 +1,386 @@
+# Wordfence WAF
+<IfModule LiteSpeed>
+php_value auto_prepend_file '/home/t0pmnlneux1q/public_html/wordfence-waf.php'
+</IfModule>
+<IfModule lsapi_module>
+php_value auto_prepend_file '/home/t0pmnlneux1q/public_html/wordfence-waf.php'
+</IfModule>
+<Files ".user.ini">
+<IfModule mod_authz_core.c>
+	Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+	Order deny,allow
+	Deny from all
+</IfModule>
+</Files>
+
+# END Wordfence WAF
+
+
+
+
+
+function enqueue_video_modal_script() {
+    ?>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.body.addEventListener("click", function (event) {
+            if (event.target.classList.contains("video-btn")) {
+                console.log("Video button clicked!");
+
+                let videoFrame = document.getElementById("videoFrame");
+                let modal = document.getElementById("videoModal");
+
+                if (!modal) {
+                    console.error("Modal not found in DOM!");
+                    return;
+                }
+
+                let videoUrl = "https://player.vimeo.com/video/958349037?h=fb8edb711c&autoplay=1";
+                videoFrame.src = videoUrl;
+
+                modal.style.display = "flex";
+                modal.style.opacity = "1";
+                modal.style.visibility = "visible";
+                modal.style.zIndex = "999999";
+            }
+        });
+
+        function closeModal() {
+            let modal = document.getElementById("videoModal");
+            let videoFrame = document.getElementById("videoFrame");
+
+            if (!modal) {
+                console.error("Modal not found when trying to close!");
+                return;
+            }
+
+            modal.style.display = "none";
+            modal.style.opacity = "0";
+            modal.style.visibility = "hidden";
+            videoFrame.src = "";
+        }
+
+        document.addEventListener("click", function (event) {
+            if (event.target.classList.contains("close-video") || event.target.classList.contains("video-popup-overlay")) {
+                closeModal();
+            }
+        });
+    });
+    </script>
+    <?php
+}
+add_action('wp_footer', 'enqueue_video_modal_script');
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Popup</title>
+      <style>
+        /* General Styles */
+        .video-popup-container {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Button Styles */
+        .video-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            transition: transform 0.3s ease;
+            width: 120px;
+            height: auto;
+            display: inline-block;
+            outline: none; /* Removes focus outline */
+            appearance: none;
+            -webkit-appearance: none;
+        }
+
+        .video-button:hover {
+            transform: scale(1.05) !important;
+            background: none !important;
+        }
+
+        .video-button:focus, .video-button:active {
+            outline: none !important; /* Removes focus outline */
+            box-shadow: none !important; /* Prevents box shadow or any focus indicator */
+            background: none !important;
+        }
+
+        .button-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Popup Styles */
+        .video-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            position: relative;
+            width: 90%;
+            max-width: 1000px;
+            background-color: #000;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* Close Button Styles */
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 0px;
+            background-color: #E2007D;
+            color: #ffffff;
+            border: 2px solid white;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            font-size: 24px;
+            line-height: 0.9;
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .close-button:hover {
+            background-color: rgba(255, 0, 0, 0.7);
+            transform: scale(1.1);
+        }
+
+        /* Video Wrapper */
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Popup Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .fade-in {
+            display: flex !important;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        /* Responsive Visibility */
+        @media (max-width: 768px) {
+            .video-button { width: 120px; }
+            .popup-content { width: 95%; }
+        }
+
+        @media (max-width: 480px) {
+            .video-button { width: 120px; }
+            .close-button {
+                width: 32px;
+                height: 32px;
+                font-size: 20px;
+                top: 5px;
+                right: 5px;
+            }
+        }
+
+        /* Hide Other Buttons and Popups Based on Screen Size */
+        @media (min-width: 769px) {  /* Show on Laptop Only */
+            .video-button.mobile, .video-popup.mobile,
+            .video-button.tablet, .video-popup.tablet {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 768px) and (min-width: 481px) {  /* Show on Tablet Only */
+            .video-button.laptop, .video-popup.laptop,
+            .video-button.mobile, .video-popup.mobile {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 480px) {  /* Show on Mobile Only */
+            .video-button.laptop, .video-popup.laptop,
+            .video-button.tablet, .video-popup.tablet {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Button & Popup for Laptop -->
+    <div class="video-popup-container">
+        <button class="video-button laptop">
+            <img src="https://aislempix.com/wp-content/uploads/2025/02/Video-button.webp" alt="Play Video" class="button-image">
+        </button>
+        <div class="video-popup laptop">
+            <div class="popup-content">
+                <div class="video-wrapper">
+                    <iframe class="popup-video"
+                        src="https://player.vimeo.com/video/958349037?h=fb8edb711c"
+                        width="640" height="360"
+                        frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                    <button class="close-button">&times;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Button & Popup for Tablet -->
+    <div class="video-popup-container">
+        <button class="video-button tablet">
+            <img src="https://aislempix.com/wp-content/uploads/2025/02/Video-button.webp" alt="Play Video" class="button-image">
+        </button>
+        <div class="video-popup tablet">
+            <div class="popup-content">
+                <div class="video-wrapper">
+                    <iframe class="popup-video"
+                        src="https://player.vimeo.com/video/958349037?h=fb8edb711c"
+                        width="640" height="360"
+                        frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                    <button class="close-button">&times;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Button & Popup for Mobile -->
+    <div class="video-popup-container">
+        <button class="video-button mobile">
+            <img src="https://aislempix.com/wp-content/uploads/2025/02/Video-button.webp" alt="Play Video" class="button-image">
+        </button>
+        <div class="video-popup mobile">
+            <div class="popup-content">
+                <div class="video-wrapper">
+                    <iframe class="popup-video"
+                        src="https://player.vimeo.com/video/958349037?h=fb8edb711c"
+                        width="640" height="360"
+                        frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                    <button class="close-button">&times;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".video-popup-container").forEach((container) => {
+                const videoButton = container.querySelector(".video-button");
+                const videoPopup = container.querySelector(".video-popup");
+                const closeButton = container.querySelector(".close-button");
+                const popupVideo = container.querySelector(".popup-video");
+
+                if (videoButton && videoPopup && closeButton && popupVideo) {
+                    videoButton.addEventListener("click", function () {
+                        videoPopup.classList.add("fade-in");
+                        popupVideo.src = popupVideo.src.replace("?h=", "?autoplay=1&h=");
+                    });
+
+                    closeButton.addEventListener("click", function () {
+                        closePopup(videoPopup, popupVideo);
+                    });
+
+                    videoPopup.addEventListener("click", function (event) {
+                        if (event.target === videoPopup) {
+                            closePopup(videoPopup, popupVideo);
+                        }
+                    });
+
+                    function closePopup(popup, video) {
+                        popup.classList.remove("fade-in");
+                        video.src = video.src.replace("?autoplay=1&h=", "?h=");
+                        setTimeout(() => {
+                            if (!popup.classList.contains("fade-in")) {
+                                popup.style.display = "none";
+                            }
+                        }, 300);
+                    }
+
+                    videoPopup.addEventListener("animationend", function () {
+                        if (videoPopup.classList.contains("fade-in")) {
+                            videoPopup.style.display = "flex";
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+
+<script>
+     document.addEventListener("DOMContentLoaded", () => {
+            highlightActivePage();
+            setupHamburgerMenu();
+        });
+
+        function highlightActivePage() {
+            const currentPath = window.location.pathname.split("/").pop();
+            const menuItems = document.querySelectorAll('.nav-links li a');
+
+            menuItems.forEach(item => {
+                if (item.getAttribute('href') === currentPath) {
+                    item.classList.add("active");
+                }
+            });
+        }
+
+        function setupHamburgerMenu() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            const hamburgerIcon = document.querySelector('.hamburger i');
+
+            hamburger.addEventListener("click", () => {
+                toggleMenu(navLinks, hamburgerIcon, hamburger);
+            });
+        }
+
+        function toggleMenu(navLinks, hamburgerIcon, hamburger) {
+            navLinks.classList.toggle("active");
+
+            if (navLinks.classList.contains("active")) {
+                hamburgerIcon.classList.remove("fa-bars");
+                hamburgerIcon.classList.add("fa-xmark");
+                hamburger.classList.add("close-style");  // add custom style
+            } else {
+                hamburgerIcon.classList.remove("fa-xmark");
+                hamburgerIcon.classList.add("fa-bars");
+                hamburger.classList.remove("close-style");  // remove custom style
+            }
+        }
+
+  </script>
+</body>
+</html>

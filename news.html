@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latest News Section</title>
+  <link rel="stylesheet" href="news.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="../Images/Home Page Thumbnails/Logoimage.png" type="image/x-icon" />
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html" class="logos">Veeville.</a>
+    </div>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="work.html">WORK</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
+
+  <section class="news-container">
+    <div class="desktop-layout">
+      <!-- First Column: Title -->
+      <div class="column column-title">
+        <h1 class="news-title">Latest news</h1>
+      </div>
+      <!-- Second Column: Left Categories -->
+      <div class="column column-left">
+        <ul class="categories">
+          <li>
+            <input type="radio" id="all-news" name="category" checked>
+            <label for="all-news">All news</label>
+          </li>
+          <li>
+            <input type="radio" id="preview" name="category">
+            <label for="preview">Preview</label>
+          </li>
+          <li>
+            <input type="radio" id="publications" name="category">
+            <label for="publications">Publications</label>
+          </li>
+          <li>
+            <input type="radio" id="commentary" name="category">
+            <label for="commentary">Commentary</label>
+          </li>
+        </ul>
+      </div>
+      <!-- Third Column: Right Categories -->
+      <div class="column column-right">
+        <ul class="categories">
+          <li>
+            <input type="radio" id="work" name="category">
+            <label for="work">Work</label>
+          </li>
+          <li>
+            <input type="radio" id="events" name="category">
+            <label for="events">Events</label>
+          </li>
+          <li>
+            <input type="radio" id="press" name="category">
+            <label for="press">Press</label>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Accordion for Mobile -->
+    <div class="accordion">
+      <div class="accordion-item">
+        <button class="accordion-header">Latest news</button>
+        <div class="accordion-content">
+          <h1 class="news-title">Latest news</h1>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header">Categories Left</button>
+        <div class="accordion-content">
+          <ul class="categories">
+            <li>
+              <input type="radio" id="all-news-mobile" name="category-mobile" checked>
+              <label for="all-news-mobile">All news</label>
+            </li>
+            <li>
+              <input type="radio" id="preview-mobile" name="category-mobile">
+              <label for="preview-mobile">Preview</label>
+            </li>
+            <li>
+              <input type="radio" id="publications-mobile" name="category-mobile">
+              <label for="publications-mobile">Publications</label>
+            </li>
+            <li>
+              <input type="radio" id="commentary-mobile" name="category-mobile">
+              <label for="commentary-mobile">Commentary</label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header">Categories Right</button>
+        <div class="accordion-content">
+          <ul class="categories">
+            <li>
+              <input type="radio" id="work-mobile" name="category-mobile">
+              <label for="work-mobile">Work</label>
+            </li>
+            <li>
+              <input type="radio" id="events-mobile" name="category-mobile">
+              <label for="events-mobile">Events</label>
+            </li>
+            <li>
+              <input type="radio" id="press-mobile" name="category-mobile">
+              <label for="press-mobile">Press</label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="news-grid">
+    <!-- Left Side: Large News Item -->
+    <div class="news-item large">
+      <img
+        src="https://pentagram-production.imgix.net/4070c7b6-3721-4caf-acd3-0cf59ea7127c/Helions_3.png?crop=entropy&rect=0%2C0%2C2140%2C1426&w=500&fm=jpg&q=70&auto=format"
+        alt="Helions" class="news-image" />
+      <div class="news-content">
+        <h2 class="news-title">Helions</h2>
+        <p class="news-meta">Work — Nov 25, 2024</p>
+        <p class="news-description">
+          Matt Willey and team design the brand identity for a publishing house
+          founded by photographer Jack Davison.
+        </p>
+      </div>
+    </div>
+
+    <!-- Right Side: Small News Items -->
+    <div class="news-item small">
+      <img
+        src="https://pentagram-production.imgix.net/8b8cc192-edaa-4055-bb4a-4e8bf2aa1ce7/MotoGPnews.png?rect=3%2C0%2C1055%2C1055&w=140&fit=crop&fm=jpg&q=70&auto=format&h=140"
+        alt="MotoGP Identity" class="news-image small-image" />
+      <div class="news-content small-content">
+        <h2 class="news-title">Forbes Features Angus Hyland’s MotoGP Identity ↗</h2>
+        <p class="news-meta">Press — Nov 22, 2024</p>
+      </div>
+    </div>
+
+    <div class="news-item small">
+      <img
+        src="https://pentagram-production.imgix.net/daaef282-3878-41c9-9f4f-e8750c9b0299/AH_MotoGP_19.png?rect=241%2C0%2C988%2C987&w=140&fit=crop&fm=jpg&q=70&auto=format&h=140"
+        alt="MotoGP Identity for Brand New" class="news-image small-image" />
+      <div class="news-content small-content">
+        <h2 class="news-title">
+          Angus Hyland’s Identity for MotoGP Featured on Brand New ↗
+        </h2>
+        <p class="news-meta">Press — Nov 22, 2024</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="news-section-4-grid">
+    <!-- Left Side: Large News Item -->
+    <div class="news-section-4-item large">
+      <img
+        src="https://pentagram-production.imgix.net/98b93417-a197-47f5-95f4-d93da5743340/MW_01_GSA_Website_08_cover.png?crop=entropy&rect=0%2C0%2C3840%2C2160&w=740&q=70&fm=jpg&auto=format&dpr=2"
+        alt="GSA" class="news-section-4-image" />
+      <div class="news-section-4-content">
+        <h2 class="news-section-4-title">GSA</h2>
+        <p class="news-section-4-meta">Work — Nov 19, 2024</p>
+        <p class="news-section-4-description">
+          Marina Willer and team create the visual identity for an independent global trading firm with a pioneering
+          mindset and a progressive work culture.
+        </p>
+      </div>
+    </div>
+
+    <!-- Right Side: First Small News Item -->
+    <div class="news-section-4-item side-by-side">
+      <img
+        src="https://pentagram-production.imgix.net/adcbcd60-67f3-47ba-9368-42455b4df5dc/HP_08_Guggenheim_Case_Study_Cover6.jpg?rect=819%2C0%2C2161%2C2160&w=233&fit=crop&q=70&fm=jpg&auto=format&h=233&dpr=2"
+        alt="Guggenheim Identity" class="news-section-4-image small-image" />
+      <div class="news-section-4-content">
+        <h2 class="news-section-4-title">FastCo Design Features Harry Pearce’s Identity ↗</h2>
+        <p class="news-section-4-meta">Press — Nov 20, 2024</p>
+      </div>
+    </div>
+
+    <!-- Right Side: MotoGP Image and Content -->
+    <div class="news-section-4-item full-width">
+      <img
+        src="https://pentagram-production.imgix.net/daaef282-3878-41c9-9f4f-e8750c9b0299/AH_MotoGP_06.png?crop=entropy&rect=0%2C0%2C1921%2C1080&w=740&q=70&fm=jpg&auto=format&dpr=2"
+        alt="MotoGP Identity" class="news-section-4-image" />
+      <div class="news-section-4-content">
+        <h2 class="news-section-4-title">MotoGP on Track ↗</h2>
+        <p class="news-section-4-meta">Press — Nov 20, 2024</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="news-data">
+    <div class="news-data-container">
+      <!-- Left Side -->
+      <div class="news-data-left">
+        <img
+          src="https://pentagram-production.imgix.net/7aa2f3d2-ddef-489a-8d7b-be4a413753b8/Abridge_CaseStudy_10_A.jpg?crop=entropy&rect=0%2C0%2C1690%2C1920&w=740&fm=jpg&q=70&auto=format"
+          alt="Abridge" class="news-data-left-image" />
+        <div class="news-data-left-content">
+          <h3>Abridge</h3>
+          <p class="meta">Work — Nov 15, 2024</p>
+          <p class="description">
+            Natasha Jen and team design the brand identity for the AI-powered
+            clinical healthcare conversation platform.
+          </p>
+        </div>
+      </div>
+
+      <!-- Right Side -->
+      <div class="news-data-right ">
+        <div class="news-data-item first-right ">
+          <img
+            src="https://pentagram-production.imgix.net/84f1c77a-0387-4ebe-8772-2334bda4569e/HP_24_Guggenheim_Case_Study_241107.jpg?rect=367%2C0%2C2223%2C2222&w=233&fit=crop&fm=jpg&q=70&auto=format&h=233"
+            alt="Alex Katz" />
+          <div>
+            <h4>Harry Pearce’s Identity for Guggenheim Featured on Creative Boom</h4>
+            <p class="meta">Press — Nov 15, 2024</p>
+          </div>
+        </div>
+        <div class="news-data-item">
+          <img
+            src="https://pentagram-production.imgix.net/84f1c77a-0387-4ebe-8772-2334bda4569e/HP_25_Guggenheim_Case_Study_241107.jpg?rect=0%2C238%2C1825%2C1824&w=233&fit=crop&fm=jpg&q=70&auto=format&h=233"
+            alt="Creative Review" />
+          <div>
+            <h4>Harry Pearce’s Identity for Guggenheim Featured on Creative Review</h4>
+            <p class="meta">Press — Nov 15, 2024</p>
+          </div>
+        </div>
+        <div class="news-data-item">
+          <img
+            src="https://pentagram-production.imgix.net/84f1c77a-0387-4ebe-8772-2334bda4569e/HP_32_Guggenheim_Case_Study_24110721.jpg?rect=439%2C0%2C2223%2C2222&w=233&fit=crop&fm=jpg&q=70&auto=format&h=233"
+            alt="Creative Bloc" />
+          <div>
+            <h4>Harry Pearce’s Identity for Guggenheim Featured on Creative Bloc</h4>
+            <p class="meta">Press — Nov 15, 2024</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="news-content">
+    <div class="news-content__container">
+      <!-- Left Section -->
+      <div class="news-content__left">
+        <!-- Top Left Card -->
+        <div class="news-content__card news-content__card--left-top">
+          <img
+            src="https://pentagram-production.imgix.net/adcbcd60-67f3-47ba-9368-42455b4df5dc/HP_18_Guggenheim_Case_Study_Cover9.jpg?rect=844%2C0%2C2161%2C2160&w=233&fit=crop&q=70&fm=jpg&auto=format&h=233&dpr=2"
+            alt="Joan Miró">
+          <div class="news-content__details">
+            <h3>Brand New Features Harry Pearce’s Identity for Guggenheim</h3>
+            <p class="news-content__meta">Press — Nov 15, 2024</p>
+          </div>
+        </div>
+        <!-- Bottom Left Card -->
+        <div class="news-content__card news-content__card--left-bottom">
+          <img
+            src="https://pentagram-production.imgix.net/05528855-f469-4b65-ab2b-62e64730a1e0/01_Guggenheim_Cover_Resize.jpg?crop=entropy&rect=0%2C0%2C3840%2C2160&w=740&fm=jpg&q=70&auto=format"
+            alt="Guggenheim">
+          <div class="news-content__details">
+            <h3>Guggenheim</h3>
+            <p class="news-content__meta">Work — Nov 08, 2024</p>
+            <p>Harry Pearce and team create a new visual identity for the constellation of global art museums.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Section -->
+      <div class="news-content__right">
+        <!-- Top Right Card -->
+        <div class="news-content__card news-content__card--right-top">
+          <img
+            src="https://pentagram-production.imgix.net/e0ce4422-fc29-4c36-89b5-269a4847cc8f/MBS_HomepageCarouselAnimation_1copy.jpg?crop=entropy&rect=0%2C0%2C1920%2C1080&w=740&q=70&fm=jpg&auto=format&dpr=2"
+            alt="Marina Bay Sands">
+          <div class="news-content__details news-content__details--right-top">
+            <h3>Marina Bay Sands</h3>
+            <p class="news-content__meta">Work — Nov 12, 2024</p>
+            <p>Michael Gericke and team design the identity for the iconic integrated resort in Singapore as it reaches
+              a new milestone as a luxury destination.</p>
+          </div>
+        </div>
+
+        <!-- Bottom Right Card -->
+        <div class="news-content__card news-content__card--right-bottom">
+          <img
+            src="https://pentagram-production.imgix.net/ec3f4b25-a3a8-4d82-a6b8-b9f145e5535c/241030_Metrograph-Cover_Front1.jpg?rect=778%2C0%2C2003%2C2003&w=233&fit=crop&fm=jpg&q=70&auto=format&h=233"
+            alt="The Metrograph">
+          <div class="news-content__details news-content__details--right-bottom">
+            <h3>Matt Willey's 'The Metrograph'</h3>
+            <p class="news-content__meta">Press — Nov 05, 2024</p>
+            <p>Magazine featured in The New York Times.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="news-master">
+    <div class="news-content">
+      <!-- Left Content -->
+      <div class="left-content">
+        <!-- Highlight News -->
+        <div class="highlight-news">
+          <div class="highlight-news-image">
+            <img
+              src="https://pentagram-production.imgix.net/25d04a1a-92ea-410c-a974-11a3d1658e4d/jdmw.jpg?rect=0%2C0%2C1080%2C1080&w=233&fit=crop&fm=jpg&q=70&auto=format&h=233"
+              alt="Jack Davison Alphabet Books" />
+          </div>
+          <div class="highlight-news-text">
+            <h3>Jack Davison Alphabet Books</h3>
+            <p>
+              <strong>Designed by Matt Willey Featured in Creative Review ↗</strong>
+              <span>Press — Nov 05, 2024</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Featured Work -->
+        <div class="featured-work">
+          <img
+            src="https://pentagram-production.imgix.net/a58b5610-4cbc-4191-a024-5219547d032a/09_Projects.png?crop=entropy&rect=0%2C0%2C4000%2C2217&w=740&fm=jpg&q=70&auto=format"
+            alt="PolyBio Research Foundation" />
+          <h3>PolyBio Research Foundation</h3>
+          <p>
+            <span>Work — Oct 31, 2024</span>
+            Giorgia Lupi and team design an interactive digital platform for the leading disease research organization.
+          </p>
+        </div>
+      </div>
+
+      <!-- Right Content -->
+      <div class="right-content">
+        <img
+          src="https://pentagram-production.imgix.net/8dd6834a-e2ef-4f70-8084-2dcf492c50aa/01.jpg?crop=entropy&rect=0%2C0%2C3000%2C4000&w=740&fm=jpg&q=70&auto=format"
+          alt="How America elects a President" />
+        <p><strong>How America elects a President</strong></p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <footer class="footer">
+
+    <div class="footer-content">
+      <div class="footer-left">
+       <a href="./Terms.html" class="footer-link">Terms & Conditions</a>
+        <a href="./Privacy.html" class="footer-link">Privacy Policy</a>
+                <p>© 2009 – 2025 Veeville</p>
+      </div>
+      <div class="footer-right">
+        <a href="#" class="footer-link">Instagram</a>
+        <a href="#" class="footer-link">LinkedIn</a>
+        <a href="#" class="footer-link">X</a>
+        <a href="#" class="footer-link">Facebook</a>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Updated Font Awesome Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" crossorigin="anonymous"></script>
+  
+
+
+  <script src="script.js"></script>
+<script>
+     document.addEventListener("DOMContentLoaded", () => {
+            highlightActivePage();
+            setupHamburgerMenu();
+        });
+
+        function highlightActivePage() {
+            const currentPath = window.location.pathname.split("/").pop();
+            const menuItems = document.querySelectorAll('.nav-links li a');
+
+            menuItems.forEach(item => {
+                if (item.getAttribute('href') === currentPath) {
+                    item.classList.add("active");
+                }
+            });
+        }
+
+        function setupHamburgerMenu() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            const hamburgerIcon = document.querySelector('.hamburger i');
+
+            hamburger.addEventListener("click", () => {
+                toggleMenu(navLinks, hamburgerIcon, hamburger);
+            });
+        }
+
+        function toggleMenu(navLinks, hamburgerIcon, hamburger) {
+            navLinks.classList.toggle("active");
+
+            if (navLinks.classList.contains("active")) {
+                hamburgerIcon.classList.remove("fa-bars");
+                hamburgerIcon.classList.add("fa-xmark");
+                hamburger.classList.add("close-style");  // add custom style
+            } else {
+                hamburgerIcon.classList.remove("fa-xmark");
+                hamburgerIcon.classList.add("fa-bars");
+                hamburger.classList.remove("close-style");  // remove custom style
+            }
+        }
+
+  </script>
+
+</body>
+</html>

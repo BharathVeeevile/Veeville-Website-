@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRL Invictus</title>
+    <link rel="stylesheet" href="DRLReport.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="../Images/Home Page Thumbnails/Logoimage.png" type="image/x-icon" />
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+
+
+<body>
+     <nav class="navbar">
+        <div class="logo">
+          <a href="index.html" class="logo-link">
+            <img src="../Images/Home Page Thumbnails/VeevilleLogo.png" alt="Veeville Logo" class="logo-image" />
+          </a>
+        </div>
+    
+        <div class="hamburger">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+    
+        <ul class="nav-links">
+          <li><a href="../work.html">WORK</a></li>
+          <li><a href="../about.html">ABOUT</a></li>
+          <li><a href="../contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+
+
+
+    <section class="project-data">
+        <!-- Title and Content Row -->
+        <div class="title-content-row">
+            <div class="title">
+                <h1>Master of my fate.<br>Captain of my soul
+                </h1>
+                <h2>DRL Invictus</h2>
+            </div>
+            <div class="content">
+                <p> <span class="veeville-tag">Veeville.</span> designed 'Invictus' for Dr. Reddy's Laboratories, a
+                    commemorative book celebrating their women leaders during the pandemic. The design language merges
+                    elegant illustrations with vibrant colors to capture the resilience and strength of these
+                    changemakers.
+                </p>
+            </div>
+        </div>
+        <div class="expedia-image">
+            <img src="../Images/DRLReport/DRL-Banner2.jpg" alt="DRL">
+        </div>
+    </section>
+
+
+    <section class="design-section">
+        <div class="row">
+
+            <div class="column column-2">
+                <img src="../Images/DRLReport/DRLReport1.jpg" alt="Image 3" class="image">
+                <img src="../Images/DRLReport/DRLReport2.jpg" alt="Image 4" class="image middle-image">
+                <img src="../Images/DRLReport/DRLReport3.jpg" alt="Image 5" class="image">
+            </div>
+            <div class="column column-1">
+                <img src="../Images/DRLReport/DRL-left1.jpg" alt="Image 1" class="image">
+                <img src="../Images/DRLReport/DRLReport-left2.jpg" alt="Image 2" class="image">
+            </div>
+        </div>
+    </section>
+
+    <section class="project-navigation-section">
+        <hr class="divider">
+        <div class="project-navigation">
+          <a class="prev-project" href="Krem.html">Previous Project</a>
+          <a href="../work.html#Book-Design" class="Categories-data">
+     
+           <span class="branding-title">Book Design</span>
+
+          </a>
+          <a class="next-project" href="Kyoorius.html">Next Project</a>
+        </div>
+      </section>
+    
+
+    <section class="section-datas">
+        <div class="sticky-data" id="stickyData">
+            <div class="icon-wrapper left-icon">
+                <a href="../work.html">
+                    <i class="fas fa-arrow-left"></i>
+           <span class="tooltip left-tooltip">Previous Project</span>
+                </a>
+            </div>
+            <a href="../work.html#Book-Design" class="sticky-card">
+                    
+               <span class="sticky-data-text">Book Design</span>
+            </a>
+            <div class="icon-wrapper right-icon">
+                <a href="Kyoorius.html">
+                    <i class="fas fa-arrow-right"></i>
+                    <span class="tooltip right-tooltip">Next Project</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <a href="./Terms.html" class="footer-link">Terms & Conditions</a>
+                <a href="./Privacy.html" class="footer-link privacy-data">Privacy Policy</a>
+                <p>© 2009 – 2024 Veeville</p>
+            </div>
+            <div class="footer-right">
+                <a href="https://www.instagram.com/VeevilleConsulting/" class="footer-link" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/veevilleconsulting/" class="footer-link" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="footer-link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="footer-link">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Updated Font Awesome Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"
+        crossorigin="anonymous"></script>
+
+
+
+  
+
+
+   
+    <script>
+        function initializeStickyBar() {
+         const stickyData = document.getElementById('stickyData');
+         const footer = document.querySelector('.footer');
+      
+         window.addEventListener('scroll', handleStickyBarScroll);
+      
+         function handleStickyBarScroll() {
+           const footerTop = footer.getBoundingClientRect().top;
+           const windowHeight = window.innerHeight;
+      
+           toggleStickyBarVisibility();
+           hideStickyBarNearFooter(footerTop, windowHeight);
+         }
+      
+         function toggleStickyBarVisibility() {
+           if (window.scrollY > 20) {
+             stickyData.classList.remove('hidden');
+           } else {
+             stickyData.classList.add('hidden');
+           }
+         }
+      
+         function hideStickyBarNearFooter(footerTop, windowHeight) {
+           if (footerTop <= windowHeight) {
+             stickyData.style.opacity = '0';
+             stickyData.style.pointerEvents = 'none';
+           } else {
+             stickyData.style.opacity = '1';
+             stickyData.style.pointerEvents = 'all';
+           }
+         }
+       }
+      
+       // Call the function to initialize the sticky bar behavior
+       initializeStickyBar();
+      </script>
+
+
+
+<script>
+     document.addEventListener("DOMContentLoaded", () => {
+            highlightActivePage();
+            setupHamburgerMenu();
+        });
+
+        function highlightActivePage() {
+            const currentPath = window.location.pathname.split("/").pop();
+            const menuItems = document.querySelectorAll('.nav-links li a');
+
+            menuItems.forEach(item => {
+                if (item.getAttribute('href') === currentPath) {
+                    item.classList.add("active");
+                }
+            });
+        }
+
+        function setupHamburgerMenu() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            const hamburgerIcon = document.querySelector('.hamburger i');
+
+            hamburger.addEventListener("click", () => {
+                toggleMenu(navLinks, hamburgerIcon, hamburger);
+            });
+        }
+
+        function toggleMenu(navLinks, hamburgerIcon, hamburger) {
+            navLinks.classList.toggle("active");
+
+            if (navLinks.classList.contains("active")) {
+                hamburgerIcon.classList.remove("fa-bars");
+                hamburgerIcon.classList.add("fa-xmark");
+                hamburger.classList.add("close-style");  // add custom style
+            } else {
+                hamburgerIcon.classList.remove("fa-xmark");
+                hamburgerIcon.classList.add("fa-bars");
+                hamburger.classList.remove("close-style");  // remove custom style
+            }
+        }
+
+  </script>
+
+</body>
+</html>
