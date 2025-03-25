@@ -196,7 +196,7 @@ border-radius: 15px;
 
 @media  (max-width:1024px){
     .graphcore-section{
-        margin-top: 65px !important;
+        margin-top: 0px !important;
     }
     .graphcore-header .description {
        padding: 0px 10px;
@@ -204,10 +204,11 @@ border-radius: 15px;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .graphcore-header {
         flex-direction: column;
         text-align: center;
+        gap: 0px;
     }
 
     .graphcore-header .description {
@@ -215,7 +216,7 @@ border-radius: 15px;
         
     }
     .graphcore-section{
-        margin-top: 65px !important;
+        margin-top: 0px !important;
     }
 }
 
@@ -227,7 +228,8 @@ border-radius: 15px;
 
     .graphcore-header .title p,
     .graphcore-header .description p {
-        font-size: 14px;
+      font-size: 16px;
+      margin-top: 10px;
    
     }
 }

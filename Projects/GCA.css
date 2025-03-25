@@ -222,14 +222,14 @@ border-radius: 15px;
     }
 
     .project-data{
-      margin-top: 70px !important;
+      margin-top: 0px !important;
     }
   }
   
   @media (max-width: 767px) {
   
     .project-data{
-      margin-top: 70px !important;
+      margin-top: 0px !important;
     }
     .title-content-row {
       flex-direction: column;

@@ -220,7 +220,7 @@ border-radius: 15px;
   font-style: italic; /* Italicize the text */
   font-family: Georgia, serif; /* Apply Georgia font */
   font-size: 24px; /* Larger font size */
-  font-weight: bold; /* Make it stand out */
+  font-weight: 500; /* Make it stand out */
   color: #333; /* Dark color for emphasis */
 }
 .vertical-sidebar {
@@ -305,7 +305,7 @@ border-radius: 15px;
 @media (max-width: 767px) {
 
   .project-data{
-    margin-top: 65px !important;
+    margin-top: 0px !important;
   }
   .title-content-row {
     flex-direction: column;
