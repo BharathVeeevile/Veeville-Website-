@@ -31,7 +31,7 @@
 }
 
 .logo-image {
-  height: 40px;
+  height: 30px;
 }
 
 .nav-links {
@@ -59,7 +59,7 @@
 .nav-links li a:hover {
   color: #000;
   font-weight: bold;
-  border-bottom: 2px solid black;
+  border-bottom: 0px solid black;
   padding-bottom: 3px;
 }
 
@@ -138,7 +138,7 @@
     max-width: 1400px;
     margin: 0 auto;
     width: 100%;
-    margin-top: 100px;
+    margin-top: 0px;
 }
 
 .media-header {
@@ -229,7 +229,7 @@ border-radius: 15px;
 @media (max-width: 768px) {
     .media-section{
 
-        margin-top: 65px !important;
+        margin-top: 0px !important;
     
     }
     .media-header {
@@ -251,7 +251,7 @@ border-radius: 15px;
 
     .media-header .title p,
     .media-header .description p {
-        font-size: 14px;
+        font-size: 16px;
         text-align: center;
     
     }

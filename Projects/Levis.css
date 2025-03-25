@@ -31,7 +31,7 @@ body {
 }
 
 .logo-image {
-  height: 40px;
+  height: 30px;
 }
 
 .nav-links {
@@ -59,7 +59,7 @@ body {
 .nav-links li a:hover {
   color: #000;
   font-weight: bold;
-  border-bottom: 2px solid black;
+  border-bottom: 0px solid black;
   padding-bottom: 3px;
 }
 
@@ -210,7 +210,7 @@ border-radius: 15px;
       text-align: center;
     }
     .project-data{
-      margin-top: 70px !important;
+      margin-top: 0px !important;
     }
     .title h1 {
       font-size: 24px;
@@ -225,7 +225,7 @@ border-radius: 15px;
   @media (max-width: 767px) {
   
     .project-data{
-      margin-top: 70px !important;
+      margin-top: 0px !important;
     }
     .title-content-row {
       flex-direction: column;
@@ -798,7 +798,7 @@ border-radius: 15px;
     }
   
     .footer-right {
-      margin-top: 10px;
+      margin-top: 0px;
     }
   }
   
@@ -812,7 +812,7 @@ border-radius: 15px;
     }
   
     .footer-link {
-      font-size: 14px;
+      font-size: 16px;
     }
   }
 

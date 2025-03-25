@@ -34,7 +34,7 @@ html, body {
 }
 
 .logo-image {
-  height: 40px;
+  height: 30px;
 }
 
 .nav-links {
@@ -62,7 +62,7 @@ html, body {
 .nav-links li a:hover {
   color: #000;
   font-weight: bold;
-  border-bottom: 2px solid black;
+  border-bottom: 0px solid black;
   padding-bottom: 3px;
 }
 

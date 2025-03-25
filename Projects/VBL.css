@@ -16,6 +16,7 @@
   
 
 /* Navbar */
+
 /* Navbar */
 
 .navbar {
@@ -32,7 +33,7 @@
 }
 
 .logo-image {
-  height: 40px;
+  height: 30px;
 }
 
 .nav-links {
@@ -60,7 +61,7 @@
 .nav-links li a:hover {
   color: #000;
   font-weight: bold;
-  border-bottom: 2px solid black;
+  border-bottom: 0px solid black;
   padding-bottom: 3px;
 }
 
@@ -74,6 +75,9 @@
   .hamburger {
     display: block;
   }
+
+
+
 
   .hamburger.close-style {
     background-color: #000;
@@ -100,7 +104,7 @@
     text-align: center;
     z-index: 10;
 }
-  }
+  
 
   .nav-links.active {
     display: flex;
@@ -113,6 +117,9 @@
   .nav-links li:last-child {
     margin-bottom: 0;
   }
+
+}
+
 
 /* media video */
 
@@ -135,7 +142,7 @@
     max-width: 1400px;
     margin: 0 auto;
     width: 100%;
-    margin-top: 100px;
+    margin-top: 0px;
 }
 
 .media-header {
@@ -215,6 +222,18 @@ border-radius: 15px;
     font-weight: 500; /* Make it stand out */
     color: #333; /* Dark color for emphasis */
   }
+
+  @media(max-width:1200px){
+    .media-header .title h1 {
+      font-size: 24px;
+      text-align: left;
+      padding: 0px 15px;
+  }
+  .media-header .title p{
+    padding: 0px 15px;
+  }
+
+  }
   
   
   @media (max-width: 768px) {
@@ -226,7 +245,7 @@ border-radius: 15px;
 @media (max-width: 768px) {
     .media-section{
 
-        margin-top: 65px !important;
+        margin-top: 0px !important;
     
     }
     .media-header {

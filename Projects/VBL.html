@@ -15,28 +15,28 @@
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
+
 </head>
 
 
 <body>
-        <nav class="navbar">
-            <div class="logo">
-                    <a href="../index.html" class="logo-link">
-                <img src="../Images/Home Page Thumbnails/VeevilleLogo.png" alt="Veeville Logo" class="logo-image" />
-                <span class="logo-text"></span>
-            </a>
-            </div>
-            <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-            </div>
-            <ul class="nav-links">
-            <li><a href="../work.html">WORK</a></li>
-            <li><a href="../about.html">ABOUT</a></li>
-            <li><a href="../contact.html">CONTACT</a></li>
-            </ul>
-        </nav>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html" class="logo-link">
+        <img src="../Images/Home Page Thumbnails/VeevilleLogo.png" alt="Veeville Logo" class="logo-image" />
+      </a>
+    </div>
+
+    <div class="hamburger">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="../work.html">WORK</a></li>
+      <li><a href="../about.html">ABOUT</a></li>
+      <li><a href="../contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
 
 
     <section class="media-section">
@@ -123,7 +123,7 @@
       <div class="footer-left">
         <a href="./Terms.html" class="footer-link">Terms & Conditions</a>
         <a href="./Privacy.html" class="footer-link privacy-data">Privacy Policy</a>
-        <p>© 2009 – 2024 Veeville</p>
+        <p>© 2025 Veeville</p>
       </div>
       <div class="footer-right">
         <a href="https://www.instagram.com/VeevilleConsulting/" class="footer-link" target="_blank">
@@ -291,48 +291,47 @@
    initializeStickyBar();
   </script>
 
-
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-  highlightActivePage();
-  setupHamburgerMenu();
-});
+         highlightActivePage();
+         setupHamburgerMenu();
+     });
 
-function highlightActivePage() {
-  const currentPath = window.location.pathname.split("/").pop();
-  const menuItems = document.querySelectorAll('.nav-links li a');
+     function highlightActivePage() {
+         const currentPath = window.location.pathname.split("/").pop();
+         const menuItems = document.querySelectorAll('.nav-links li a');
 
-  menuItems.forEach(item => {
-    if (item.getAttribute('href') === currentPath) {
-      item.classList.add("active");
-    }
-  });
-}
+         menuItems.forEach(item => {
+             if (item.getAttribute('href') === currentPath) {
+                 item.classList.add("active");
+             }
+         });
+     }
 
-function setupHamburgerMenu() {
-  const hamburger = document.querySelector('.hamburger');
-  const navLinks = document.querySelector('.nav-links');
-  const hamburgerIcon = document.querySelector('.hamburger i');
+     function setupHamburgerMenu() {
+         const hamburger = document.querySelector('.hamburger');
+         const navLinks = document.querySelector('.nav-links');
+         const hamburgerIcon = document.querySelector('.hamburger i');
 
-  hamburger.addEventListener("click", () => {
-    toggleMenu(navLinks, hamburgerIcon, hamburger);
-  });
-}
+         hamburger.addEventListener("click", () => {
+             toggleMenu(navLinks, hamburgerIcon, hamburger);
+         });
+     }
 
-function toggleMenu(navLinks, hamburgerIcon, hamburger) {
-  navLinks.classList.toggle("active");
+     function toggleMenu(navLinks, hamburgerIcon, hamburger) {
+         navLinks.classList.toggle("active");
 
-  if (navLinks.classList.contains("active")) {
-    hamburgerIcon.classList.remove("fa-bars");
-    hamburgerIcon.classList.add("fa-xmark");
-    hamburger.classList.add("close-style");  // add custom style
-  } else {
-    hamburgerIcon.classList.remove("fa-xmark");
-    hamburgerIcon.classList.add("fa-bars");
-    hamburger.classList.remove("close-style");  // remove custom style
-  }
-}
+         if (navLinks.classList.contains("active")) {
+             hamburgerIcon.classList.remove("fa-bars");
+             hamburgerIcon.classList.add("fa-xmark");
+             hamburger.classList.add("close-style");  // add custom style
+         } else {
+             hamburgerIcon.classList.remove("fa-xmark");
+             hamburgerIcon.classList.add("fa-bars");
+             hamburger.classList.remove("close-style");  // remove custom style
+         }
+     }
 
-</script>
+  </script>
 </body>
 </html>

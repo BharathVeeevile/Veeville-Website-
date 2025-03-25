@@ -31,7 +31,7 @@
 }
 
 .logo-image {
-  height: 40px;
+  height: 30px;
 }
 
 .nav-links {
@@ -59,7 +59,7 @@
 .nav-links li a:hover {
   color: #000;
   font-weight: bold;
-  border-bottom: 2px solid black;
+  border-bottom: 0px solid black;
   padding-bottom: 3px;
 }
 
@@ -190,6 +190,12 @@
     font-weight: 500; /* Make it stand out */
     color: #333; /* Dark color for emphasis */
   }
+
+  @media (max-width: 1024px){
+    .graphcore-header .title h1{
+      font-size: 24px;
+    }
+  }
   
   
   @media (max-width: 768px) {
@@ -209,7 +215,7 @@
     }
     .graphcore-section{
 
-        margin-top: 75px !important;
+        margin-top: 0px !important;
     
     }
     .graphcore-header .description p {

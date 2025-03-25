@@ -31,7 +31,7 @@
 }
 
 .logo-image {
-  height: 40px;
+  height: 30px;
 }
 
 .nav-links {
@@ -59,7 +59,7 @@
 .nav-links li a:hover {
   color: #000;
   font-weight: bold;
-  border-bottom: 2px solid black;
+  border-bottom: 0px solid black;
   padding-bottom: 3px;
 }
 
@@ -199,7 +199,7 @@ border-radius: 15px;
     }
   }
 
-@media (min-width: 768px) and (max-width: 1024px){
+@media (min-width: 768px) and (max-width: 1200px){
     .graphcore-header {
         flex-direction: column;
         text-align: center;
@@ -209,7 +209,7 @@ border-radius: 15px;
         text-align: center;
     }
     .graphcore-section{
-        margin-top: 65px !important;
+        margin-top: 0px !important;
     }
     .graphcore-header .title h1 {
         font-size: 24px;
@@ -227,7 +227,7 @@ border-radius: 15px;
         text-align: center;
     }
     .graphcore-section{
-        margin-top: 65px !important;
+        margin-top: 0px !important;
     }
 }
 
@@ -242,7 +242,7 @@ border-radius: 15px;
         font-size: 14px;
     }
     .graphcore-section{
-        margin-top: 60px !important;
+        margin-top: 0px !important;
     }
 
     .graphcore-header{

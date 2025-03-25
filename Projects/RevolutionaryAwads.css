@@ -31,7 +31,7 @@ body {
 }
 
 .logo-image {
-  height: 40px;
+  height: 30px;
 }
 
 .nav-links {
@@ -59,7 +59,7 @@ body {
 .nav-links li a:hover {
   color: #000;
   font-weight: bold;
-  border-bottom: 2px solid black;
+  border-bottom: 0px solid black;
   padding-bottom: 3px;
 }
 
@@ -571,6 +571,19 @@ border-radius: 15px;
     font-weight: 500; /* Make it stand out */
     color: #333; /* Dark color for emphasis */
   }
+
+  @media (max-width:1024px){
+    .graphcore-header .title h1 {
+      font-size: 24px;
+      padding: 0px 10px;
+  
+  }
+
+  .graphcore-header .title p {
+    font-size: 16px;
+    padding: 0px 10px;
+}
+  }
   
   
   @media (max-width: 768px) {
@@ -601,7 +614,7 @@ border-radius: 15px;
 
 
     .graphcore-section{
-        margin-top: 65px !important;
+        margin-top: 0px !important;
     }
 
 }
@@ -615,13 +628,13 @@ border-radius: 15px;
 
     .graphcore-header .title p,
     .graphcore-header .description p {
-        font-size: 14px;
+        font-size: 16px;
         padding: 0px 0px;
         line-height: 24px;
     }
 
     .graphcore-section{
-        margin-top: 65px !important;
+        margin-top: 0px !important;
     }
     .graphcore-header{
         gap: 10px;

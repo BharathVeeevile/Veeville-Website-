@@ -30,7 +30,7 @@ body {
 }
 
 .logo-image {
-  height: 40px;
+  height: 30px;
 }
 
 .nav-links {
@@ -58,7 +58,7 @@ body {
 .nav-links li a:hover {
   color: #000;
   font-weight: bold;
-  border-bottom: 2px solid black;
+  border-bottom: 0px solid black;
   padding-bottom: 3px;
 }
 
@@ -272,168 +272,56 @@ border-radius: 15px;
 /* 2 location */
 
 
-.locations {
-  padding: 10px 80px;
-}
-
 .locations-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 0px;
-  /* Space between blocks */
-
-  margin: 0 auto;
+  max-width: 1400px;
+  margin: auto;
+  padding: 20px;
   justify-content: space-between;
-  /* Align blocks */
 }
 
-/* New York Block */
-.location-newyork {
-  flex: 1 1 calc(50% - 20px);
-  /* Two blocks side by side with space */
-  background-color: #fff;
+.location-block, .description-block {
+  flex: 1;
   padding: 20px;
-
-  
-border-radius: 15px;    
+  min-width: 280px;
 }
 
-
-.details-newyork h2 {
-  font-size: 1.8rem;
-  margin-bottom: 5px;
-  color: #000;
-}
-
-.details-newyork .time {
-  font-size: 1.5rem;
+.location-block h2 {
+  font-size: 28px;
   margin-bottom: 10px;
-  color: #333;
 }
 
-.details-newyork a {
-  color: #000;
-  text-decoration: none;
-}
-
-.details-newyork a:hover {
-  text-decoration: underline;
-}
-
-.description-newyork p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #666;
-}
-
-/* London Block */
-.location-london {
-  flex: 1 1 calc(50% - 20px);
-  /* Two blocks side by side with space */
-  background-color: #fff;
-  padding: 20px;
-  
-border-radius: 15px;    
-}
-
-.details-london h2 {
-  font-size: 1.8rem;
-  margin-bottom: 5px;
-  color: #000;
-}
-
-.details-london .time {
-  font-size: 1.5rem;
+.time-display {
+  font-weight: bold;
   margin-bottom: 10px;
-  color: #333;
 }
 
-.details-london a {
-  color: #000;
+.location-block a, .description-block a {
   text-decoration: none;
+  color: #b52a2a;
+  font-weight: bold;
 }
 
-.details-london a:hover {
-  text-decoration: underline;
+.description-block h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
-.description-london p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #666;
+.description-block p {
+  margin-bottom: 10px;
 }
 
-/* Responsive Design */
-@media (min-width : 320px) and (max-width: 767px) {
-  .locations {
-    padding: 0px 20px;
-  }
-}
-
-
-@media (min-width:767px) and (max-width:1024px) {
-  .locations {
-    padding: 0px 40px;
-  }
-  .contact-container{
-    padding: 10px 20px 0px 20px;
-  }
-}
-
-@media (max-width: 767px) {
-
-  .location-newyork,
-  .location-london {
-    flex: 1 1 100%;
-    /* Full width for smaller screens */
-    margin-bottom: 0px;
-    /* Space between stacked blocks */
-  }
-}
-
-@media (max-width: 768px) {
-
-  .details-newyork h2,
-  .details-london h2 {
-    font-size: 1.5rem;
-  }
-
-  .details-newyork .time,
-  .details-london .time {
-    font-size: 1.2rem;
-  }
-
-  .details-newyork p,
-  .description-newyork p,
-  .details-london p,
-  .description-london p {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .locations-container {
-    gap: 0px;
-    /* Reduce gap for smaller screens */
+    flex-direction: column;
   }
 
-  .details-newyork h2,
-  .details-london h2 {
-    font-size: 1.3rem;
-  }
-
-  .details-newyork .time,
-  .details-london .time {
-    font-size: 1rem;
-  }
-
-  .details-newyork p,
-  .description-newyork p,
-  .details-london p,
-  .description-london p {
-    font-size: 0.8rem;
+  .location-block, .description-block {
+    width: 100%;
   }
 }
+
 
 
 /* Add this to styles.css */

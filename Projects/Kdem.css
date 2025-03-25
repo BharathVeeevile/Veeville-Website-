@@ -31,7 +31,7 @@ body {
 }
 
 .logo-image {
-  height: 40px;
+  height: 30px;
 }
 
 .nav-links {
@@ -59,7 +59,7 @@ body {
 .nav-links li a:hover {
   color: #000;
   font-weight: bold;
-  border-bottom: 2px solid black;
+  border-bottom: 0px solid black;
   padding-bottom: 3px;
 }
 
@@ -218,11 +218,11 @@ border-radius: 15px;
   @media (max-width: 768px) {
   
     .project-data{
-      margin-top: 75px !important;
+      margin-top: 0px !important;
     }
     .title-content-row {
       flex-direction: column;
-      gap: 10px;
+      gap: 0px;
       /* Reduced gap for smaller screens */
     }
   
@@ -273,7 +273,8 @@ border-radius: 15px;
     }
   
     .title h2 {
-      font-size: 0.9rem;
+      font-size: 16px;
+      margin-top: 10px;
     }
   
     .content p {
