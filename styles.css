@@ -127,8 +127,9 @@ body {
 
 .search-icon {
   cursor: pointer;
-  font-size: 22px;
+  font-size: 21px;
   color: #333;
+  margin-top: -2px;
 }
 
 #search-overlay {
@@ -148,38 +149,46 @@ body {
   position: relative;
   display: flex;
   align-items: center;
+  background-color: rgba(202, 182, 155, 0.8); /* brownish color matching your image */
+  backdrop-filter: blur(15px);
+  width: 600px;
+  padding: 12px 20px;
+  border-radius: 15px;
 }
 
 .search-box .icon {
   position: absolute;
-  left: 15px;
-  font-size: 20px;
-  color: #8e44ad;
+  left: 20px;
+  font-size: 22px;
+  color: #5a4a42; /* dark brownish icon */
 }
 
 .search-box input {
-  width: 600px;
-  padding: 12px 20px 12px 45px;
-  border: 2px solid #8e44ad;
-  border-radius: 30px;
-  font-size: 18px;
+  width: 100%;
+  padding: 10px 15px 10px 45px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
   outline: none;
-  color: #16a085;
-  background: #fff;
+  color: #5a4a42; /* dark brownish text */
 }
 
 .search-box input::placeholder {
-  color: #16a085;
+  color: #5a4a42;
   opacity: 0.7;
 }
 
-@media (max-width: 700px) {
-  .search-box input {
+@media (max-width: 770px) {
+  .search-box {
     width: 90%;
-    font-size: 16px;
   }
+  .search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
+}
 
 
 
