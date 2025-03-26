@@ -109,35 +109,7 @@
   
 
 
-  <section class="contact-section1">
-    <div class="contact-container">
-
-      <div class="grid-container">
-        <!-- Static Image 1 -->
-        <div class="grid-item slideshow">
-          <img
-            src="https://pentagram-production.imgix.net/c9632427-e8b7-48dc-b47f-a6afc6e21dc6/250pas_newest11.20_03.jpg?rect=0%2C0%2C1280%2C1700&w=740&fit=crop&fm=jpg&q=70&auto=format&h=983"
-            alt="Static Image 1" />
-          <img
-            src="https://pentagram-production.imgix.net/4940ce39-e031-4fdb-8b32-4947db087624/250-pas-2a_formatted.jpg?rect=0%2C0%2C1481%2C1967&w=640&h=850&fit=crop&fm=jpg&q=70&auto=format"
-            alt="First Slide" />
-        </div>
-        <!-- Static Image 2 -->
-        <div class="grid-item slideshow">
-          <img
-            src="https://pentagram-production.imgix.net/d6568d9c-717a-4889-9d32-0b95529facbe/london-106.jpg?rect=417%2C0%2C1044%2C1388&w=740&fit=crop&fm=jpg&q=70&auto=format&h=983"
-            alt="Static Image 2" />
-
-          <img
-            src="https://pentagram-production.imgix.net/f5e11e6e-4eca-44f1-a4bf-e5acd52e4ac2/london002.jpg?rect=0%2C0%2C998%2C1325&w=740&fit=crop&fm=jpg&q=70&auto=format&h=983"
-            alt="Second Slide" />
-        </div>
-      </div>
-      <!-- Slideshow Section -->
-
-    </div>
-  </section>
-
+  
 
   
 
@@ -291,20 +263,20 @@
 
 
 
-    function initializeContactPageSlideshow() {
-      let slideIndex = 0;
+    // function initializeContactPageSlideshow() {
+    //   let slideIndex = 0;
 
-      function showSlides() {
-        const slides = document.querySelectorAll(".slideshow-left .slide");
-        slides.forEach((slide) => (slide.style.display = "none"));
-        slideIndex++;
-        if (slideIndex > slides.length) slideIndex = 1;
-        slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlides, 3000);
-      }
+    //   function showSlides() {
+    //     const slides = document.querySelectorAll(".slideshow-left .slide");
+    //     slides.forEach((slide) => (slide.style.display = "none"));
+    //     slideIndex++;
+    //     if (slideIndex > slides.length) slideIndex = 1;
+    //     slides[slideIndex - 1].style.display = "block";
+    //     setTimeout(showSlides, 3000);
+    //   }
 
-      showSlides();
-    }
+    //   showSlides();
+    // }
 
 
     // script.js

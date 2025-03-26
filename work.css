@@ -716,6 +716,7 @@ border-radius: 15px;
 
 .work-carousel-item img {
   width: 100%;
+  /* width: 420px; */
   height: auto;
   display: block;
   border-radius: 15px;
@@ -723,6 +724,10 @@ border-radius: 15px;
 
 .work-carousel-item p{
   color: #000;
+  font-family: "Manrope", sans-serif;
+  letter-spacing: 2px;
+  text-align: left;
+  font-size: 20px;
 }
 
 
@@ -781,7 +786,7 @@ border-radius: 15px;
 
 
 .all-projects {
-  padding: 40px;
+  padding: 0px 40px;
   margin: 0 auto;
 }
 
