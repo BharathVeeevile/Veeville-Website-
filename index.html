@@ -16,11 +16,14 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
     rel="stylesheet">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
   <link rel="icon" href="../Images/Home Page Thumbnails/Logoimage.png" type="image/x-icon" />
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
 </head>
 
@@ -29,8 +32,8 @@
 
   <nav class="navbar">
     <div class="logo">
-       <a href="index.html" class="logo-link">
-        <img src="../Images/Home Page Thumbnails/VeevilleLogo.png" alt="Veeville Logo" class="logo-image" />
+      <a href="index.html" class="logo-link">
+        <img src="../Images/Work Page Thumbnails/Logo Image.webp" alt="Veeville Logo" class="logo-image" />
       </a>
     </div>
 
@@ -42,6 +45,26 @@
       <li><a href="work.html">WORK</a></li>
       <li><a href="about.html">ABOUT</a></li>
       <li><a href="contact.html">CONTACT</a></li>
+
+      <!-- ADD THIS HERE -->
+      <li>
+        <div class="search-container">
+          <div class="search-icon" onclick="toggleSearch()">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div id="search-overlay">
+            <div class="search-box">
+              <i class="fa-solid fa-magnifying-glass icon"></i>
+              <input type="text" placeholder="Ask Bob" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Include FontAwesome -->
+
+
+      </li>
+      <!-- END -->
     </ul>
   </nav>
 
@@ -339,45 +362,67 @@
 
   <script src="https://player.vimeo.com/api/player.js"></script>
   <script>
-     document.addEventListener("DOMContentLoaded", () => {
-            highlightActivePage();
-            setupHamburgerMenu();
-        });
+    document.addEventListener("DOMContentLoaded", () => {
+      highlightActivePage();
+      setupHamburgerMenu();
+    });
 
-        function highlightActivePage() {
-            const currentPath = window.location.pathname.split("/").pop();
-            const menuItems = document.querySelectorAll('.nav-links li a');
+    function highlightActivePage() {
+      const currentPath = window.location.pathname.split("/").pop();
+      const menuItems = document.querySelectorAll('.nav-links li a');
 
-            menuItems.forEach(item => {
-                if (item.getAttribute('href') === currentPath) {
-                    item.classList.add("active");
-                }
-            });
+      menuItems.forEach(item => {
+        if (item.getAttribute('href') === currentPath) {
+          item.classList.add("active");
         }
+      });
+    }
 
-        function setupHamburgerMenu() {
-            const hamburger = document.querySelector('.hamburger');
-            const navLinks = document.querySelector('.nav-links');
-            const hamburgerIcon = document.querySelector('.hamburger i');
+    function setupHamburgerMenu() {
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+      const hamburgerIcon = document.querySelector('.hamburger i');
 
-            hamburger.addEventListener("click", () => {
-                toggleMenu(navLinks, hamburgerIcon, hamburger);
-            });
+      hamburger.addEventListener("click", () => {
+        toggleMenu(navLinks, hamburgerIcon, hamburger);
+      });
+    }
+
+    function toggleMenu(navLinks, hamburgerIcon, hamburger) {
+      navLinks.classList.toggle("active");
+
+      if (navLinks.classList.contains("active")) {
+        hamburgerIcon.classList.remove("fa-bars");
+        hamburgerIcon.classList.add("fa-xmark");
+        hamburger.classList.add("close-style");  // add custom style
+      } else {
+        hamburgerIcon.classList.remove("fa-xmark");
+        hamburgerIcon.classList.add("fa-bars");
+        hamburger.classList.remove("close-style");  // remove custom style
+      }
+    }
+
+  </script>
+
+
+  <!-- search bar -->
+  <script>
+    
+    function toggleSearch() {
+      const overlay = document.getElementById("search-overlay");
+      const inputField = overlay.querySelector("input");
+
+      // Reset input value each time you open the search
+      inputField.value = '';
+
+      overlay.style.display = "flex";
+
+      overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) {
+          overlay.style.display = "none";
         }
-
-        function toggleMenu(navLinks, hamburgerIcon, hamburger) {
-            navLinks.classList.toggle("active");
-
-            if (navLinks.classList.contains("active")) {
-                hamburgerIcon.classList.remove("fa-bars");
-                hamburgerIcon.classList.add("fa-xmark");
-                hamburger.classList.add("close-style");  // add custom style
-            } else {
-                hamburgerIcon.classList.remove("fa-xmark");
-                hamburgerIcon.classList.add("fa-bars");
-                hamburger.classList.remove("close-style");  // remove custom style
-            }
-        }
+      });
+    }
 
   </script>
 
@@ -385,5 +430,7 @@
 
 
 
+
 </body>
+
 </html>
