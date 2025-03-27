@@ -382,5 +382,23 @@ add_action('wp_footer', 'enqueue_video_modal_script');
         }
 
   </script>
+<script>
+    function toggleSearch() {
+      const overlay = document.getElementById("search-overlay");
+      const inputField = overlay.querySelector("input");
+
+      inputField.value = ''; // reset input every time
+      overlay.style.display = "flex";
+      inputField.focus();
+
+      overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) {
+          overlay.style.display = "none";
+        }
+      });
+    }
+  </script>
+
+
 </body>
 </html>

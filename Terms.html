@@ -29,7 +29,7 @@
   <nav class="navbar">
     <div class="logo">
        <a href="index.html" class="logo-link">
-        <img src="../Images/Home Page Thumbnails/VeevilleLogo.png" alt="Veeville Logo" class="logo-image" />
+        <img src="../Images/Work Page Thumbnails/Logo Image.webp" alt="Veeville Logo" class="logo-image" />
       </a>
     </div>
 
@@ -41,6 +41,27 @@
       <li><a href="work.html">WORK</a></li>
       <li><a href="about.html">ABOUT</a></li>
       <li><a href="contact.html">CONTACT</a></li>
+
+      <!-- ADD THIS HERE -->
+      <li>
+        <div class="search-container">
+          <div class="search-icon" onclick="toggleSearch()">
+            <i class="fa-solid fa-magnifying-glass"></i> 
+
+
+          </div>
+          <div id="search-overlay">
+            <div class="search-box">
+              <i class="fa-solid fa-magnifying-glass"></i> 
+
+
+              <input type="text" placeholder="Ask Bob Anything" class="search-input" />
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- END -->
     </ul>
   </nav>
 
@@ -475,6 +496,24 @@
     }
 
   </script>
+
+<script>
+    function toggleSearch() {
+      const overlay = document.getElementById("search-overlay");
+      const inputField = overlay.querySelector("input");
+
+      inputField.value = ''; // reset input every time
+      overlay.style.display = "flex";
+      inputField.focus();
+
+      overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) {
+          overlay.style.display = "none";
+        }
+      });
+    }
+  </script>
+
 
 </body>
 

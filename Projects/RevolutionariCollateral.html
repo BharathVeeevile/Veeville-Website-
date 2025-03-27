@@ -6,35 +6,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Revolutionari Collateral</title>
     <link rel="stylesheet" href="RevolutionariCollateral.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="icon" href="../Images/Home Page Thumbnails/Logoimage.png" type="image/x-icon" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- Font Awesome Core (includes all styles) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Font Awesome Regular style explicitly (optional but safe) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/regular.min.css">
+
+    <!-- Font Awesome Core with all styles (including regular) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-ry8cdIRbkIuWqsbY4YwQmK4gUOG9QY/1XJmDnZKwL31oPx47N3YeNj3uSuDsMZr+IWyAN3vJzhxnTI2W58jTNA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
 </head>
 
 <body>
 
-     <nav class="navbar">
+    <nav class="navbar">
         <div class="logo">
-           <a href="../index.html" class="logo-link">
-            <img src="../Images/Home Page Thumbnails/VeevilleLogo.png" alt="Veeville Logo" class="logo-image" />
-          </a>
+             <a href="../index.html" class="logo-link">
+                <img src="../Images/Work Page Thumbnails/Logo Image.webp" alt="Veeville Logo" class="logo-image" />
+            </a>
         </div>
-    
+
         <div class="hamburger">
-          <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-bars"></i>
         </div>
-    
+
         <ul class="nav-links">
-          <li><a href="../work.html">WORK</a></li>
-          <li><a href="../about.html">ABOUT</a></li>
-          <li><a href="../contact.html">CONTACT</a></li>
+            <li><a href="work.html">WORK</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+
+            <!-- ADD THIS HERE -->
+            <li>
+                <div class="search-container">
+                    <div class="search-icon" onclick="toggleSearch()">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+
+                    </div>
+                    <div id="search-overlay">
+                        <div class="search-box">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+
+
+                            <input type="text" placeholder="Ask Bob Anything" class="search-input" />
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- END -->
         </ul>
-      </nav>
+    </nav>
 
 
-  
+
 
 
 
@@ -100,15 +144,15 @@
 
 
 
-    
+
     <section class="project-navigation-section">
         <hr class="divider">
         <div class="project-navigation">
-          <a class="prev-project" href="FMR.html">Previous Project</a>
-       <a href="../work.html#Campaigns" class="Categories-data">
-          <span class="branding-title">Campaigns</span>
-          </a>
-          <a class="next-project" href="Booket.html">Next Project</a>
+            <a class="prev-project" href="FMR.html">Previous Project</a>
+            <a href="../work.html#Campaigns" class="Categories-data">
+                <span class="branding-title">Campaigns</span>
+            </a>
+            <a class="next-project" href="Booket.html">Next Project</a>
         </div>
     </section>
 
@@ -117,10 +161,10 @@
             <div class="icon-wrapper left-icon">
                 <a href="FMR.html">
                     <i class="fas fa-arrow-left"></i>
-           <span class="tooltip left-tooltip">Previous Project</span>
+                    <span class="tooltip left-tooltip">Previous Project</span>
                 </a>
             </div>
-                      <a href="../work.html#Campaigns" class="sticky-card">
+            <a href="../work.html#Campaigns" class="sticky-card">
                 <span class="sticky-data-text">Campaigns</span>
             </a>
             <div class="icon-wrapper right-icon">
@@ -244,50 +288,50 @@
     </script>
 
 
-  
+
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 
-   
-<script>
-    function initializeStickyBar() {
-     const stickyData = document.getElementById('stickyData');
-     const footer = document.querySelector('.footer');
-  
-     window.addEventListener('scroll', handleStickyBarScroll);
-  
-     function handleStickyBarScroll() {
-       const footerTop = footer.getBoundingClientRect().top;
-       const windowHeight = window.innerHeight;
-  
-       toggleStickyBarVisibility();
-       hideStickyBarNearFooter(footerTop, windowHeight);
-     }
-  
-     function toggleStickyBarVisibility() {
-       if (window.scrollY > 20) {
-         stickyData.classList.remove('hidden');
-       } else {
-         stickyData.classList.add('hidden');
-       }
-     }
-  
-     function hideStickyBarNearFooter(footerTop, windowHeight) {
-       if (footerTop <= windowHeight) {
-         stickyData.style.opacity = '0';
-         stickyData.style.pointerEvents = 'none';
-       } else {
-         stickyData.style.opacity = '1';
-         stickyData.style.pointerEvents = 'all';
-       }
-     }
-   }
-  
-   // Call the function to initialize the sticky bar behavior
-   initializeStickyBar();
-  </script>
-<script>
-     document.addEventListener("DOMContentLoaded", () => {
+
+    <script>
+        function initializeStickyBar() {
+            const stickyData = document.getElementById('stickyData');
+            const footer = document.querySelector('.footer');
+
+            window.addEventListener('scroll', handleStickyBarScroll);
+
+            function handleStickyBarScroll() {
+                const footerTop = footer.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                toggleStickyBarVisibility();
+                hideStickyBarNearFooter(footerTop, windowHeight);
+            }
+
+            function toggleStickyBarVisibility() {
+                if (window.scrollY > 20) {
+                    stickyData.classList.remove('hidden');
+                } else {
+                    stickyData.classList.add('hidden');
+                }
+            }
+
+            function hideStickyBarNearFooter(footerTop, windowHeight) {
+                if (footerTop <= windowHeight) {
+                    stickyData.style.opacity = '0';
+                    stickyData.style.pointerEvents = 'none';
+                } else {
+                    stickyData.style.opacity = '1';
+                    stickyData.style.pointerEvents = 'all';
+                }
+            }
+        }
+
+        // Call the function to initialize the sticky bar behavior
+        initializeStickyBar();
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
             highlightActivePage();
             setupHamburgerMenu();
         });
@@ -327,7 +371,26 @@
             }
         }
 
-  </script>
+    </script>
+
+    <script>
+        function toggleSearch() {
+            const overlay = document.getElementById("search-overlay");
+            const inputField = overlay.querySelector("input");
+
+            inputField.value = ''; // reset input every time
+            overlay.style.display = "flex";
+            inputField.focus();
+
+            overlay.addEventListener('click', function (e) {
+                if (e.target === overlay) {
+                    overlay.style.display = "none";
+                }
+            });
+        }
+    </script>
+
 
 </body>
+
 </html>
