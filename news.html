@@ -22,10 +22,10 @@
 
 <body>
 
-  
+
   <nav class="navbar">
     <div class="logo">
-       <a href="index.html" class="logo-link">
+      <a href="index.html" class="logo-link">
         <img src="../Images/Work Page Thumbnails/Logo Image.webp" alt="Veeville Logo" class="logo-image" />
       </a>
     </div>
@@ -43,13 +43,13 @@
       <li>
         <div class="search-container">
           <div class="search-icon" onclick="toggleSearch()">
-            <i class="fa-solid fa-magnifying-glass"></i> 
+            <i class="fa-solid fa-magnifying-glass"></i>
 
 
           </div>
           <div id="search-overlay">
             <div class="search-box">
-              <i class="fa-solid fa-magnifying-glass"></i> 
+              <i class="fa-solid fa-magnifying-glass"></i>
 
 
               <input type="text" placeholder="Ask Bob Anything" class="search-input" />
@@ -436,31 +436,31 @@
       highlightActivePage();
       setupHamburgerMenu();
     });
-  
+
     function highlightActivePage() {
       const currentPath = window.location.pathname.split("/").pop();
       const menuItems = document.querySelectorAll('.nav-links li a');
-  
+
       menuItems.forEach(item => {
         if (item.getAttribute('href') === currentPath) {
           item.classList.add("active");
         }
       });
     }
-  
+
     function setupHamburgerMenu() {
       const hamburger = document.querySelector('.hamburger');
       const navLinks = document.querySelector('.nav-links');
       const hamburgerIcon = document.querySelector('.hamburger i');
-  
+
       hamburger.addEventListener("click", () => {
         toggleMenu(navLinks, hamburgerIcon, hamburger);
       });
     }
-  
+
     function toggleMenu(navLinks, hamburgerIcon, hamburger) {
       navLinks.classList.toggle("active");
-  
+
       if (navLinks.classList.contains("active")) {
         hamburgerIcon.classList.remove("fa-bars");
         hamburgerIcon.classList.add("fa-xmark");
@@ -471,10 +471,10 @@
         hamburger.classList.remove("close-style");  // remove custom style
       }
     }
-  
+
   </script>
 
-<script>
+  <script>
     function toggleSearch() {
       const overlay = document.getElementById("search-overlay");
       const inputField = overlay.querySelector("input");
